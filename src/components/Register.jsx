@@ -23,6 +23,7 @@ export default function Register({ setShowRegister }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const newUser = {
       username: usernameRef.current.value,
       email: emailRef.current.value,
@@ -51,10 +52,6 @@ export default function Register({ setShowRegister }) {
   };
   return (
     <div className="registerContainer">
-      <div className="logo">
-        <Room className="logoIcon" />
-        <span>LamaPin</span>
-      </div>
       {!usuarioValido &&
         <form onSubmit={handleSubmit}>
           <input autoFocus placeholder="username" ref={usernameRef} />
